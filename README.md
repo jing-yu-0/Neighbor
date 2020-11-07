@@ -2,17 +2,17 @@
 ### 实现了小区/学校位置选择，并根据小区/学校展示信息。信息包括小区信息交流共享，学校信息交流共享，社区论坛，租车，租房，宠物专区，表白，缘分，类似58的平台。可创建，删除，展示小区的商铺信息。
 
 # 先上是项目的截图
-<img src="image/选择小区.jpeg" width="50%" height="50%" margin-right="20" /><img src="image/首页.jpeg" width="50%" height="50%" />
+<img src="image/选择小区.jpeg" width="30%" height="30%" margin-right="20" /><img src="image/首页.jpeg" width="30%" height="30%" />
 
-<img src="image/商铺展示.jpeg" width="50%" height="50%" margin-right="20" /><img src="image/店铺详细信息.jpeg" width="50%" height="50%" />
+<img src="image/商铺展示.jpeg" width="30%" height="30%" margin-right="20" /><img src="image/店铺详细信息.jpeg" width="30%" height="30%" />
 
-<img src="image/发布.jpeg" width="50%" height="50%" margin-right="20" /><img src="image/个人页面.jpeg" width="50%" height="50%" />
+<img src="image/发布.jpeg" width="30%" height="30%" margin-right="20" /><img src="image/个人页面.jpeg" width="30%" height="30%" />
 
 
 # 如果项目帮助到了你，烦请给个辛苦钱
 
 
-<img src="image/微信.jpeg" width="50%" height="50%" margin-right="20" /><img src="image/支付宝.jpeg" width="50%" height="50%" />
+<img src="image/微信.jpeg" width="30%" height="30%" margin-right="20" /><img src="image/支付宝.jpeg" width="30%" height="30%" />
 
 
 
