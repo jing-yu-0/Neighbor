@@ -1,9 +1,23 @@
 # 本项目基于开源项目[Mango](https://github.com/Xin-Felix/Mango)二次开发
 ### 实现了小区/学校位置选择，并根据小区/学校展示信息。信息包括小区信息交流共享，学校信息交流共享，社区论坛，租车，租房，宠物专区，表白，缘分，类似58的平台。可创建，删除，展示小区的商铺信息。
 
+# 先上是项目的截图
+<img src="image/选择小区.jpeg" width="50%" height="50%" margin-right="20" /><img src="image/首页.jpeg" width="50%" height="50%" />
+
+<img src="image/商铺展示.jpeg" width="50%" height="50%" margin-right="20" /><img src="image/店铺详细信息.jpeg" width="50%" height="50%" />
+
+<img src="image/发布.jpeg" width="50%" height="50%" margin-right="20" /><img src="image/个人页面.jpeg" width="50%" height="50%" />
+
+
+# 如有问题可以随时联系我，微信号：ldpliu 如果项目帮助到了你，烦请给个辛苦钱
+
+
+<img src="image/微信.jpeg" width="50%" height="50%" margin-right="20" /><img src="image/支付宝.jpeg" width="50%" height="50%" />
+
+
+
 ### 项目使用技术
  1.前台微信小程序(Vue)
- 
  2.后台(springBoot+mybatis+mysql)
  
 ### 如何使用
@@ -52,15 +66,4 @@
  [管理员可以修改用户的帖子以及删除,在帖子页面,点击头像可以查看用户的信息并可以禁用Ta,可以回复消息给Ta]
 
 
-# 下面是项目的截图
-<img src="image/选择小区.jpeg" width="50%" height="50%" margin-right="20" /><img src="image/首页.jpeg" width="50%" height="50%" />
-
-<img src="image/商铺展示.jpeg" width="50%" height="50%" margin-right="20" /><img src="image/店铺详细信息.jpeg" width="50%" height="50%" />
-
-<img src="image/发布.jpeg" width="50%" height="50%" margin-right="20" /><img src="image/个人页面.jpeg" width="50%" height="50%" />
-
-
-# 如果项目帮助到了你，烦请给个辛苦钱
-
-<img src="image/微信.jpeg" width="50%" height="50%" margin-right="20" /><img src="image/支付宝.jpeg" width="50%" height="50%" />
 
