@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="work.huangxin.mango.mapper.MangoShopMapper">
+    <resultMap id="BaseResultMap" type="work.huangxin.mango.model.MangoShop">
+        <!--
+          WARNING - @mbg.generated
+        -->
+        <id column="shop_id" jdbcType="INTEGER" property="shopId"/>
+        <result column="user_id" jdbcType="INTEGER" property="userId"/>
+        <result column="shop_name" jdbcType="VARCHAR" property="shopName"/>
+        <result column="shop_intro" jdbcType="VARCHAR" property="shopIntro"/>
+        <result column="shop_phone" jdbcType="VARCHAR" property="shopPhone"/>
+        <result column="shop_avatar" jdbcType="VARCHAR" property="shopAvatar"/>
+        <result column="shop_opentime" jdbcType="VARCHAR" property="shopAvatar"/>
+        <result column="shop_province" jdbcType="VARCHAR" property="shopProvince"/>
+        <result column="shop_city" jdbcType="VARCHAR" property="shopCity"/>
+        <result column="shop_district" jdbcType="VARCHAR" property="shopDistrict"/>
+        <result column="shop_community" jdbcType="VARCHAR" property="shopCommunity"/>
+        <result column="shop_latitude" jdbcType="VARCHAR" property="shopLatitude"/>
+        <result column="shop_longitude" jdbcType="VARCHAR" property="shopLongitude"/>
+        <result column="shop_creat_time" jdbcType="TIMESTAMP" property="shopCreatTime"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        <!--
+          WARNING - @mbg.generated
+        -->
+        shop_id,user_id, shop_name, shop_intro, shop_phone, shop_avatar,shop_opentime, shop_province, shop_city, shop_district, shop_community, shop_latitude, shop_longitude,
+        shop_creat_time
+    </sql>
+    <insert id="insertShopDetail">
+        <selectKey resultType="Integer" keyProperty="shopId">
+            SELECT LAST_INSERT_ID()
+        </selectKey>
+        INSERT INTO mango_shop (mango_shop.shop_id,mango_shop.user_id,mango_shop.shop_name,mango_shop.shop_intro,mango_shop.shop_phone,mango_shop.shop_avatar,mango_shop.shop_opentime,
+        mango_shop.shop_province, mango_shop.shop_city, mango_shop.shop_district, mango_shop.shop_community, mango_shop.shop_longitude, mango_shop.shop_latitude)
+        VALUES
+        (#{shopId},#{userId},#{shopName},#{shopIntro},#{shopPhone},#{shopAvatar},#{shopOpentime},#{shopProvince},#{shopCity},#{shopDistrict},#{shopCommunity},#{shopLongitude},#{shopLatitude})
+        ON DUPLICATE KEY UPDATE
+        mango_shop.shop_id=#{shopId},
+        mango_shop.user_id=#{userId},
+        mango_shop.shop_name=#{shopName},
+        mango_shop.shop_intro=#{shopIntro},
+        mango_shop.shop_phone=#{shopPhone},
+        mango_shop.shop_avatar=#{shopAvatar},
+        mango_shop.shop_opentime=#{shopOpentime},
+        mango_shop.shop_province=#{shopProvince},
+        mango_shop.shop_city=#{shopCity},
+        mango_shop.shop_district=#{shopDistrict},
+        mango_shop.shop_community=#{shopCommunity},
+        mango_shop.shop_longitude=#{shopLongitude},
+        mango_shop.shop_latitude=#{shopLatitude}
+    </insert>
+    <resultMap type="work.huangxin.mango.model.MangoShop" id="getShopDetailById">
+        <!-- 关联对象 -->
+        <id column="shop_id" jdbcType="INTEGER" property="shopId"/>
+        <result column="user_id" jdbcType="INTEGER" property="userId"/>
+        <result column="shop_name" jdbcType="VARCHAR" property="shopName"/>
+        <result column="shop_intro" jdbcType="VARCHAR" property="shopIntro"/>
+        <result column="shop_phone" jdbcType="VARCHAR" property="shopPhone"/>
+        <result column="shop_avatar" jdbcType="VARCHAR" property="shopAvatar"/>
+        <result column="shop_opentime" jdbcType="VARCHAR" property="shopOpentime"/>
+        <result column="shop_province" jdbcType="VARCHAR" property="shopProvince"/>
+        <result column="shop_city" jdbcType="VARCHAR" property="shopCity"/>
+        <result column="shop_district" jdbcType="VARCHAR" property="shopDistrict"/>
+        <result column="shop_community" jdbcType="VARCHAR" property="shopCommunity"/>
+        <result column="shop_latitude" jdbcType="VARCHAR" property="shopLatitude"/>
+        <result column="shop_longitude" jdbcType="VARCHAR" property="shopLongitude"/>
+        <result column="shop_creat_time" jdbcType="TIMESTAMP" property="shopCreatTime"/>
+        <!--<collection property="shopImages" ofType="String"-->
+                    <!--javaType="list">-->
+            <!--<result column="mango_shop_images.shop_images" javaType="String"></result>-->
+        <!--</collection>-->
+
+        <collection property="shopImages" ofType="work.huangxin.mango.model.MangoShopBusiness" javaType="list">
+            <result column="mango_shop_business.shop_goods_image" javaType="String"></result>
+            <result column="mango_shop_business.shop_goods_title" javaType="String"></result>
+            <result column="mango_shop_business.shop_goods_price" javaType="String"></result>
+        </collection>
+
+    </resultMap>
+
+</mapper>

@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "nav-bar": "/components/navbar/index",
+    "l-button": "/components/button/index"
+  }
+}

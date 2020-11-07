@@ -1,0 +1,37 @@
+<view style="display:{{isLoading?'block':'none'}}">
+  <nav-bar navbar-data='{{nvabarData}}'></nav-bar>
+  <view class='home-page' style='margin-top: {{height*2+20}}px'>
+    <view class="detail_header">
+    <view class="txt_info">
+      <text class="title">{{shopMessage.shopName}}</text>
+    </view>
+    <image class="logo" src="{{imageUrl}}{{shopMessage.shopAvatar}}">
+    </image>
+  </view>
+  <view class="shop_msg-item" bindtap="bindMap">
+    <view class="txt">门店地址：</view>
+    <view class="txt">{{shopMessage.shopCommunity}}</view>
+  </view>
+  <view class="shop_msg-item">
+    <view class="txt">营业时间：</view>
+    <view class="txt">{{shopMessage.shopOpentime}}</view>
+  </view>
+  <view class="shop_msg-item" bindtap="bindTel">
+    <view class="txt">电话：</view>
+    <view class="txt">{{shopMessage.shopPhone}}</view>
+  </view>
+
+  <view class="shop_pic">
+    <view class="shop_pic-title">门店照片：</view>
+    <block wx:for="{{shopMessage.shopImages}}" wx:key="{{index}}">
+      <image bindtap="look_image" id="{{imageUrl}}{{item.shopImages}}" src="{{imageUrl}}{{item.shopImages}}" mode="widthFix" />
+    </block>
+  </view>
+  <view class="edit-shop" style="display:{{showButton?'block':'none'}}">
+      <l-button bindtap="editShop" id="{{shopMessage.shopId}}" class="add-shop-button" size="large">修改我的店铺</l-button>
+  </view>
+  <view class="delete-shop" style="display:{{showButton?'block':'none'}}">
+      <l-button type="error" id="{{shopMessage.shopId}}" bindtap="deleteShop" class="add-shop-button" size="large">删除我的店铺</l-button>
+  </view>
+  </view>
+</view>

@@ -1,0 +1,57 @@
+<view style="display:{{isLoading?'block':'none'}}">
+  <nav-bar navbar-data='{{nvabarData}}'></nav-bar>
+  <view class='home-page' style='margin-top: {{height*2+30}}px'>
+    <view class="tips">
+			请准确输入店铺信息，* 为必填项
+    </view>
+    <view class="shop-main">
+			<view class="shop-title">
+        <textarea class="text" cols="5" rows="5" bindinput='input_title' placeholder="{{input_title}}"></textarea>
+      </view>
+		   <view class='shop-logo'>
+         <image src="{{logoimage}}" bindtap="chooselogo" style='display:{{hideAdd?"block":"none"}}' mode="aspectFill"></image>
+       </view>
+        <view class='shop-logo' style='display:{{hideAdd?"none":"block"}}'>
+          <image bindtap="chooselogo" src='../../images/other/add.png'></image>
+        </view>
+    </view>
+    <view class="shop-item">
+			<view class="put-left">
+				<span class="colred">*</span>联系电话: 
+			</view>
+			<view class="put-right">
+				<input type="text" placeholder="{{input_phone}}" bindinput="input_phone" />
+			</view>
+    </view>
+    <view class="shop-item">
+			<view class="put-left">
+				<span class="colred">*</span>店铺位置: 
+			</view>
+			<view class="put-right">
+				<button class="curloc" bindtap="chooseLocation" > {{userCommunity}} </button>
+			</view>
+    </view>
+    <view class="shop-item">
+			<view class="put-left">
+				<span class="colred">*</span>营业时间: 
+			</view>
+			<view class="put-right">
+				<input type="text" placeholder="{{input_opentime}}" bindinput="input_opentime" />
+			</view>
+    </view>
+	</view>
+  <view class="shop_pic">
+    <view class='image' wx:for="{{img_url}}" wx:key="{{index}}">
+      <image class="moment_img" src="{{item}}" mode="aspectFill"></image>
+      <view class="iconfont icon-cha cha" id="{{item}}" bindtap="deleteImg"></view>
+    </view>
+    <view class='image' style='display:{{hideBottoemAdd?"none":"block"}}'>
+      <image bindtap="chooseimage" class="moment_img" src='../../images/other/add.png'></image>
+    </view>
+  </view>
+</view>
+<view class="submit">
+  <view bindtap="submit" class="main">
+    <text>确定发布</text>
+  </view>
+</view>

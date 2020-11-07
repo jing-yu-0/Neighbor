@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "nav-bar": "/components/navbar/index",
+    "search": "/components/search/index"
+  },
+  "enablePullDownRefresh": true
+}

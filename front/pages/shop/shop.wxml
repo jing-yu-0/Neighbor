@@ -1,0 +1,41 @@
+<view style="display:{{isLoading?'block':'none'}}">
+  <nav-bar navbar-data='{{nvabarData}}'></nav-bar>
+  <!-- <view class="nav-bar"> </view>> -->
+  <view class='container' style='margin-top: {{height*2+25}}px'>
+    <block wx:for="{{shopMessage}}" wx:key="{{index}}">
+      <view class="card-notice">
+  <l-card bindtap="todetail" id="{{item.shopId}}" class='card-container' type="primary" l-class="card" l-img-class="right-card" position="right" image="{{imageUrl}}{{item.shopAvatar}}"
+    title="{{item.shopName}}">
+    <view class="content">
+      <view class="content-left">地址：</view>
+      <view>{{item.shopCommunity}}</view>
+    </view>
+    <view class="content">
+      <view class="content-left">营业时间：</view>
+      <view>{{item.shopOpentime}}</view>
+    </view>
+    <view class="content">
+      <view class="content-left">联系方式：</view>
+      <view>{{item.shopPhone}}</view>
+    </view>
+  </l-card>
+  <view class="top_notice">
+      <view class="notice_title">
+        <label>公告:</label>
+      </view>
+      <swiper class="swiper_notice" circular vertical autoplay>
+        <block >
+          <swiper-item >这是一条公告</swiper-item>
+        </block>
+      </swiper>
+    </view>
+  </view> 
+</block>
+  <view class="add-shop-block">
+  </view>
+  </view>
+
+  <view class="add-shop">
+      <l-button bindtap="addshop" class="add-shop-button" size="large">添加我的店铺</l-button>
+  </view>
+</view>
