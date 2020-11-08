@@ -12,7 +12,7 @@
 # 如果项目帮助到了你，烦请给个辛苦钱
 
 
-<img src="image/微信.jpeg" width="30%" height="30%" margin-right="20" /><img src="image/支付宝.jpeg" width="30%" height="30%" />
+<img src="image/wechat.jpeg" width="30%" height="30%" margin-right="20" /><img src="image/支付宝.jpeg" width="30%" height="30%" />
 
 
 
