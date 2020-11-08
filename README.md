@@ -13,7 +13,7 @@
 
 
 <img src="image/wechat.jpeg" width="30%" height="30%" margin-right="20" /><img src="image/支付宝.jpeg" width="30%" height="30%" />
-
+![微信](./image/wechat.jpeg)
 
 
 ### 项目使用技术
